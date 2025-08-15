@@ -1,0 +1,394 @@
+/* assets/css/style.css - avefig education 完整样式 */
+
+/* 字体引入 */
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400;1,600&display=swap');
+
+/* 基础重置 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Times New Roman", "Crimson Text", Georgia, serif;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    line-height: 1.6;
+    background-color: #ffffff;
+    color: #000000;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    body {
+        padding: 15px;
+        max-width: 100%;
+    }
+}
+
+/* 标题样式 */
+h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #000;
+    padding-bottom: 5px;
+}
+
+h2 {
+    font-size: 18px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+h3 {
+    font-size: 16px;
+    margin-top: 20px;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+/* 链接样式 */
+a {
+    color: #0000EE;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+a:visited {
+    color: #551A8B;
+}
+
+a:hover {
+    color: #0052cc;
+}
+
+/* 头部区域 */
+.header {
+    text-align: center;
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.brand {
+    font-family: "Times New Roman", serif;
+    font-size: 32px;
+    font-weight: normal;
+    font-style: italic;
+    margin-bottom: 8px;
+    letter-spacing: 0.5px;
+    color: #1a1a1a;
+}
+
+.brand-sub {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 10px;
+    font-weight: normal;
+}
+
+.tagline {
+    font-size: 14px;
+    color: #888;
+    font-style: italic;
+    margin-bottom: 8px;
+}
+
+.motto {
+    font-size: 15px;
+    color: #333;
+    font-style: italic;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+/* 导航栏 */
+.nav {
+    text-align: center;
+    margin: 20px 0;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+    padding: 10px 0;
+}
+
+.nav a {
+    margin: 0 20px;
+    padding: 8px 16px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.nav a:hover {
+    background-color: #f5f5f5;
+}
+
+.nav a.active {
+    background-color: #000;
+    color: #fff;
+}
+
+.nav a.active:visited {
+    color: #fff;
+}
+
+/* 响应式导航 */
+@media (max-width: 768px) {
+    .nav a {
+        margin: 0 10px;
+        font-size: 14px;
+    }
+    
+    .brand {
+        font-size: 28px;
+    }
+}
+
+/* 语言切换器 */
+.lang-switch {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.lang-switch a {
+    display: inline-block;
+    margin: 0 3px;
+    padding: 4px 8px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    text-decoration: none;
+    background: #f9f9f9;
+    font-size: 12px;
+    transition: background-color 0.3s ease;
+}
+
+.lang-switch a:hover {
+    background: #e0e0e0;
+}
+
+.lang-switch a.active {
+    background: #000;
+    color: #fff;
+    border-color: #000;
+}
+
+.lang-switch a.active:visited {
+    color: #fff;
+}
+
+/* 特色内容框 */
+.mission-statement {
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin: 20px 0;
+    border-left: 4px solid #333;
+    font-style: italic;
+}
+
+.vision-quote {
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin: 15px 0;
+    border-left: 4px solid #666;
+    font-style: italic;
+    color: #333;
+}
+
+.methodology {
+    background-color: #fafafa;
+    padding: 15px;
+    margin: 15px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.update-log {
+    background-color: #f5f5f5;
+    padding: 15px;
+    margin: 20px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* 进度项样式 */
+.progress-item {
+    margin: 10px 0;
+    padding-left: 20px;
+    position: relative;
+}
+
+.progress-item::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: #0000EE;
+    font-weight: bold;
+}
+
+.date {
+    font-weight: bold;
+    color: #666;
+}
+
+/* 状态样式 */
+.status-completed { color: #008000; font-weight: 600; }
+.status-inprogress { color: #FF8C00; font-weight: 600; }
+.status-planned { color: #666; font-weight: 600; }
+
+/* 表格样式 */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background: white;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+th, td {
+    border: 1px solid #000;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f0f0f0;
+    font-weight: 600;
+}
+
+tr:hover {
+    background-color: #f9f9f9;
+}
+
+/* 响应式表格 */
+@media (max-width: 768px) {
+    table {
+        font-size: 14px;
+    }
+    
+    th, td {
+        padding: 6px 4px;
+    }
+}
+
+/* 列表样式 */
+ul, ol {
+    padding-left: 25px;
+    margin: 15px 0;
+}
+
+li {
+    margin: 8px 0;
+    line-height: 1.6;
+}
+
+/* 段落 */
+p {
+    margin: 15px 0;
+}
+
+/* 主内容区域 */
+main {
+    margin: 30px 0;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+/* 页脚 */
+footer {
+    text-align: center;
+    padding: 40px 0 20px 0;
+    margin-top: 60px;
+    border-top: 1px solid #e0e0e0;
+    color: #666;
+    font-size: 12px;
+}
+
+footer p {
+    margin: 8px 0;
+}
+
+footer em {
+    font-size: 14px;
+    color: #333;
+    font-weight: 500;
+}
+
+/* 博客相关样式 */
+.blog-list {
+    list-style: none;
+    padding: 0;
+}
+
+.blog-list li {
+    border-bottom: 1px solid #e0e0e0;
+    padding: 15px 0;
+}
+
+.blog-list li:last-child {
+    border-bottom: none;
+}
+
+.blog-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.blog-title a {
+    text-decoration: none;
+    color: #000;
+}
+
+.blog-title a:hover {
+    text-decoration: underline;
+}
+
+.blog-meta {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.blog-excerpt {
+    color: #333;
+    line-height: 1.5;
+}
+
+/* 返回链接 */
+.back-link {
+    display: inline-block;
+    margin: 20px 0;
+    padding: 8px 16px;
+    background: #f5f5f5;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 14px;
+    color: #333;
+}
+
+.back-link:hover {
+    background: #e0e0e0;
+    text-decoration: none;
+}
+
+/* 工具类 */
+.text-center { text-align: center; }
+.text-right { text-align: right; }
+.mt-20 { margin-top: 20px; }
+.mb-20 { margin-bottom: 20px; }
+.hidden { display: none; }

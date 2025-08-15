@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>avefig education - 选择语言</title>
+    <meta name="description" content="avefig education - Choose your language / 选择您的语言">
+    <style>
+        body {
+            font-family: "Times New Roman", Georgia, serif;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            text-align: center;
+            background-color: #ffffff;
+            color: #000000;
+        }
+        
+        .brand {
+            font-size: 48px;
+            font-style: italic;
+            margin-bottom: 20px;
+            color: #1a1a1a;
+        }
+        
+        .subtitle {
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 40px;
+        }
+        
+        .lang-options {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 60px;
+        }
+        
+        .lang-option {
+            display: block;
+            padding: 20px 40px;
+            border: 2px solid #000;
+            text-decoration: none;
+            color: #000;
+            font-size: 20px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            min-width: 120px;
+        }
+        
+        .lang-option:hover {
+            background-color: #000;
+            color: #fff;
+        }
+        
+        .lang-description {
+            font-size: 14px;
+            color: #888;
+            margin-top: 30px;
+        }
+        
+        @media (max-width: 600px) {
+            .lang-options {
+                flex-direction: column;
+                align-items: center;
+                gap: 20px;
+            }
+            
+            .brand {
+                font-size: 36px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="brand">avefig education</div>
+    <div class="subtitle">国际教育信息基础建设 | International Education Infrastructure</div>
+    
+    <div class="lang-options">
+        <a href="zh/index.html" class="lang-option">
+            中文
+        </a>
+        <a href="en/index.html" class="lang-option">
+            English
+        </a>
+    </div>
+    
+    <div class="lang-description">
+        Choose your preferred language / 选择您的首选语言
+    </div>
+</body>
+</html>
